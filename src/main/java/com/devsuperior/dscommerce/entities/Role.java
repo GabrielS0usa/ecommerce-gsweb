@@ -1,7 +1,8 @@
 package com.devsuperior.dscommerce.entities;
 
-import java.io.Serializable;
 import java.util.Objects;
+
+import org.springframework.security.core.GrantedAuthority;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +13,7 @@ import jakarta.persistence.Table;
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "tb_role")
-public class Role implements Serializable {
+public class Role implements GrantedAuthority {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
